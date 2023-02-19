@@ -4,7 +4,7 @@
     "type": "COMPATIBLE_SCREEN_MANIFEST",
     "kind": "Directory"
   },
-  "applicationId": "com.ak",
+  "applicationId": "com.incubermax.eazypark",
   "variantName": "debug",
   "elements": []
 }

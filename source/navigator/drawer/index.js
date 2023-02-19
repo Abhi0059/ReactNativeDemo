@@ -8,10 +8,11 @@ const Drawer = createDrawerNavigator();
 const AppNavigator = () => {
   return (
     <Drawer.Navigator
-      initialRouteName={"Stack"}
       screenOptions={{
         headerShown: false,
       }}
+      drawerType="front"
+      initialRouteName={"Stack"}
       drawerContent={(props) => <DrawerMenu {...props} />}
     >
       <Drawer.Screen name="Stack" component={AppStackNavigator} />

@@ -1,4 +1,5 @@
 apply plugin: "com.android.application"
+apply plugin: 'com.google.gms.google-services'
 apply plugin: "com.facebook.react"
 
 import com.android.build.OutputFile
@@ -93,9 +94,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.ak"
+    namespace "com.incubermax.eazypark"
     defaultConfig {
-        applicationId "com.ak"
+        applicationId "com.incubermax.eazypark"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -150,11 +151,18 @@ android {
 
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "com.facebook.react:react-native:+"
     implementation("com.facebook.react:react-android")
-
+    implementation 'androidx.work:work-runtime:2.7.1'
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
+       implementation platform('com.google.firebase:firebase-bom:26.7.0')
+   // implementation("com.google.firebase:firebase-iid")
 
-    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
+   debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
+      exclude group:'com.facebook.fbjni'
+    }
+
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
         exclude group:'com.squareup.okhttp3', module:'okhttp'
     }

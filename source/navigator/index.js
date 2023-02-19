@@ -2,11 +2,50 @@ import React from "react";
 import AppNavigator from "./drawer";
 import { AuthStackNavigator } from "../screens";
 import { NavigationContainer } from "@react-navigation/native";
+import Firebase from "@react-native-firebase/app";
+import PushNotification, { Importance } from "react-native-push-notification";
 
+const firebaseConfig = {
+  messagingSenderId: "964406149632",
+  projectId: "eazypark-67b1a",
+  apiKey: "AIzaSyC9Vc9SdRjSvjDiL-k56mnM3lkdHMOEESg",
+  appId: "1:964406149632:android:08a55a0432813f65438ee5",
+  databaseURL: "",
+  storageBucket: "",
+};
+const config = {
+  name: "EazyPark",
+};
+
+PushNotification.getChannels((ch) => {
+  console.log("chhh", ch);
+});
+
+//Firebase.initializeApp(firebaseConfig, config);
+if (Firebase.app.length > 0) {
+  Firebase.initializeApp(firebaseConfig, config);
+} else {
+  Firebase.app();
+}
+PushNotification.createChannel(
+  {
+    channelId: "EazyPark",
+    channelName: "EazyPark",
+    channelDescription: "EazyPark for parking",
+    soundName: "default",
+    importance: Importance.HIGH,
+    vibrate: true,
+  },
+  (created) => {
+    console.log("created", created);
+  }
+);
 class Source extends React.PureComponent {
   constructor(props) {
     super(props);
   }
+
+  componentDidMount() {}
 
   render() {
     return (
