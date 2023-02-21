@@ -42,7 +42,7 @@ const menuData = [
     id: "2",
     name: "My Bookings",
     leftimg: myBookings,
-    buttonHandle: "BookingsTabs",
+    buttonHandle: "MyBooking",
   },
   {
     id: "3",
@@ -54,13 +54,13 @@ const menuData = [
     id: "4",
     name: "Favourite Parking",
     leftimg: favouriteParkings,
-    buttonHandle: "MyFavourites",
+    buttonHandle: "FavouriteParking",
   },
   {
     id: "5",
     name: "Contact Us",
     leftimg: contactUs,
-    buttonHandle: "Help",
+    buttonHandle: "ContactUs",
   },
   {
     id: "6",
@@ -72,7 +72,7 @@ const menuData = [
     id: "7",
     name: "Refer a friend",
     leftimg: referIcon,
-    buttonHandle: "Refer",
+    buttonHandle: "ReferAFriend",
   },
   {
     id: "8",
@@ -95,7 +95,7 @@ class DrawerMenu extends React.PureComponent {
   }
 
   componentDidMount() {
-    this.checkData();
+    // this.checkData();
   }
 
   checkData = () => {
@@ -126,9 +126,9 @@ class DrawerMenu extends React.PureComponent {
     // console.log(nav.navigation);
     console.log(page);
     if (page == "Log Out") {
-      askLogoutPermission();
+      this.askLogoutPermission();
     } else if (page == "Rate Us") {
-      rateApp();
+      this.rateApp();
     } else {
       navigation.navigate(page);
     }

@@ -5,6 +5,12 @@ import Intro from "./intro";
 import OTPScreen from "./otpScreen";
 import VehicleRegisteration from "./vehicleRegisteration";
 import AddVehicle from "./addVehicle";
+import MyBooking from "./myBooking";
+import RequestPassTab from "./requestPassTab";
+import PassRequest from "./passRequest";
+import FavouriteParking from "./favouriteParking";
+import ContactUs from "./contactUs";
+import ReferAFriend from "./referAFriend";
 const Stack = createNativeStackNavigator();
 
 function AuthStackNavigator() {
@@ -29,7 +35,13 @@ function AppStackNavigator() {
       initialRouteName="Home"
     >
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="PassRequest" component={PassRequest} />
       <Stack.Screen name="AddVehicle" component={AddVehicle} />
+      <Stack.Screen name="RequestPassTab" component={RequestPassTab} />
+      <Stack.Screen name="MyBooking" component={MyBooking} />
+      <Stack.Screen name="FavouriteParking" component={FavouriteParking} />
+      <Stack.Screen name="ContactUs" component={ContactUs} />
+      <Stack.Screen name="ReferAFriend" component={ReferAFriend} />
       <Stack.Screen
         name="VehicleRegisteration"
         component={VehicleRegisteration}

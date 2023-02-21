@@ -43,17 +43,25 @@ PushNotification.createChannel(
 class Source extends React.PureComponent {
   constructor(props) {
     super(props);
+    this.state = {
+      userLogin: "false",
+    };
   }
 
   componentDidMount() {}
 
+  getStack = () => {
+    const { userLogin } = this.state;
+
+    if (userLogin === "false") {
+      return <AuthStackNavigator />;
+    } else if (userLogin === "true") {
+      return <AppNavigator />;
+    }
+  };
+
   render() {
-    return (
-      <NavigationContainer>
-        {/* <AuthStackNavigator /> */}
-        <AppNavigator />
-      </NavigationContainer>
-    );
+    return <NavigationContainer>{this.getStack()}</NavigationContainer>;
   }
 }
 

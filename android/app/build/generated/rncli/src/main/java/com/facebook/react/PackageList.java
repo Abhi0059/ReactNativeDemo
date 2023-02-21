@@ -21,6 +21,8 @@ import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 import io.invertase.firebase.config.ReactNativeFirebaseConfigPackage;
 // react-native-android-location-enabler
 import com.heanoria.library.reactnative.locationenabler.RNAndroidLocationEnablerPackage;
+// react-native-date-picker
+import com.henninghall.date_picker.DatePickerPackage;
 // react-native-device-info
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
 // react-native-fs
@@ -35,6 +37,8 @@ import com.imagepicker.ImagePickerPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-maps
 import com.airbnb.android.react.maps.MapsPackage;
+// react-native-minimize
+import com.farzadmarius.rnminimizeapp.RNMinimizeAppPackage;
 // react-native-otp-verify
 import com.faizal.OtpVerify.OtpVerifyPackage;
 // react-native-push-notification
@@ -103,6 +107,7 @@ public class PackageList {
       new ReactNativeFirebaseMessagingPackage(),
       new ReactNativeFirebaseConfigPackage(),
       new RNAndroidLocationEnablerPackage(),
+      new DatePickerPackage(),
       new RNDeviceInfo(),
       new RNFSPackage(),
       new RNGestureHandlerPackage(),
@@ -110,6 +115,7 @@ public class PackageList {
       new ImagePickerPackage(),
       new LinearGradientPackage(),
       new MapsPackage(),
+      new RNMinimizeAppPackage(),
       new OtpVerifyPackage(),
       new ReactNativePushNotificationPackage(),
       new RNRatePackage(),

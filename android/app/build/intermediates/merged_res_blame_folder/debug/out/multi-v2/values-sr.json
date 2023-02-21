@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.incubermax.eazypark.app-mergeDebugResources-37:/values-sr/values-sr.xml",
+            "outputFile": "com.incubermax.eazypark.app-mergeDebugResources-38:/values-sr/values-sr.xml",
             "map": [
                 {
                     "source": "/Users/abhijeetsingh/.gradle/caches/transforms-3/60a3040db52596d83d54e62e7abb8bf1/transformed/jetified-play-services-basement-18.1.0/res/values-sr/values.xml",
