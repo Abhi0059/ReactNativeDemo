@@ -272,13 +272,14 @@ export default class AddVehicle extends Component {
             _this.setState({
               vehicleNo: "",
             });
+            console.log("_this.props.route.params", _this.props.route.params);
             if (_this.props.route.params?.from === "vehicleRegisteration") {
               _this.props.navigation.push("VehicleRegisteration");
             } else if (_this.props.route.params?.from === "RequestPass") {
               // _this.props.navigation.push('RequestPassTab');
               _this.props.navigation.goBack();
             } else {
-              _this.props.navigation.navigate("Dashboard");
+              _this.props.navigation.navigate("Home");
             }
             _this.setState({ showLoader: false });
             commanService.createSimpleToast(

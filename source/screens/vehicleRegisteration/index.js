@@ -65,7 +65,7 @@ export default class VehicleRegisteration extends Component {
   componentDidMount() {
     BackHandler.addEventListener("hardwareBackPress", this.onBackPress);
     setTimeout(() => {
-      // this.getVehicles();
+      this.getVehicles();
     }, 500);
   }
 
@@ -90,12 +90,13 @@ export default class VehicleRegisteration extends Component {
 
   getVehicles() {
     var _this = this;
+    const { navigation } = this.props;
     this.setState({ showLoader: true });
     restApi.setUrl(apiName["getVehicle"] + this.state.userId);
     restApi.getRequest(function (response) {
       if (response.respCode == 1) {
         _this.setState({ showLoader: false });
-        console.log(response);
+        console.log("reponse of registered getVehicle", response);
         if (response["details"].length > 0) {
           _this.sortData(response["details"]);
 
@@ -128,10 +129,10 @@ export default class VehicleRegisteration extends Component {
             a["isVehicleRegistered"] = "no";
             commanService.storeData("userData", a);
           });
-          _this.props.navigation.navigate("AddVehicle");
+          // navigation.navigate("AddVehicle");
         }
       } else {
-        _this.setState({ showLoader: false });
+        this.setState({ showLoader: false });
       }
     });
   }
@@ -409,7 +410,7 @@ export default class VehicleRegisteration extends Component {
                     {"Vehicle Registration"}
                   </Text>
                 </TouchableOpacity>
-                <Image
+                {/* <Image
                   onPress={() => this.select(index, item)}
                   style={{
                     width: "100%",
@@ -418,7 +419,7 @@ export default class VehicleRegisteration extends Component {
                     // backgroundColor: colorCodes.primaryColor,
                   }}
                   source={null}
-                />
+                /> */}
               </View>
               <View
                 style={{

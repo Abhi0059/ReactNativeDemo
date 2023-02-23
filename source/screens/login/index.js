@@ -152,11 +152,12 @@ class Login extends React.PureComponent {
         Name: Name,
         AppId: hashId,
       };
-
+      console.log("notificationid", notificationid, " appVersion ", appVersion);
       console.log("createOtp request params", req);
       httpCall(apiName["createOtp"], req).then(
         (data) => {
           if (data.respCode == 1) {
+            console.log("response of createOtp", data);
             Toast.show("Otp Sent");
             getUserData("userData").then((res) => {
               req["notificationid"] = notificationid;

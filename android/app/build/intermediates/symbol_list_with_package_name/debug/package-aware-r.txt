@@ -3149,6 +3149,7 @@ styleable ViewBackgroundHelper android_background backgroundTint backgroundTintM
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 xml imagepicker_provider_paths
+xml provider_paths
 xml rn_dev_preferences
 xml share_download_paths
 xml standalone_badge

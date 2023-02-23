@@ -31,6 +31,7 @@ import SmsRetriever from "react-native-sms-retriever";
 import Toast from "react-native-simple-toast";
 import { w, h, f } from "../../theme/responsive";
 import { CodeField, Cursor } from "react-native-confirmation-code-field";
+import Events from "../../utils/event";
 const OTPScreen = (props) => {
   //const { signIn } = React.useContext(AuthContext);
   const [otpCode, setOtpCode] = useState("");
@@ -87,9 +88,11 @@ const OTPScreen = (props) => {
         Version: Version,
         OTP: otpCode,
       };
+
+      console.log("validateOtp request params", req);
       httpCall(apiName["validateOtp"], req).then(
         (data) => {
-          console.log("validateOtp", data);
+          console.log("reponse of validateOtp", data);
           if (data.respCode == 1) {
             login(data.userId, data.refCode, data.name);
           } else {
@@ -119,17 +122,21 @@ const OTPScreen = (props) => {
       DeviceId: DeviceId,
       notificationid: notificationid,
     };
+    console.log("validateOtp request params", req);
     httpCall(apiName["login"], req).then((response) => {
       if (response.respCode == 1) {
+        console.log("reponse of validateOtp", response);
         getVehicleList(userId);
         var temp = Base64.encode(userId);
         console.log("login Validate OTP:>", response);
         getUserData("userData").then((res) => {
-          req["isLogin"] = true;
+          req["isLogin"] = "true";
           req["UserId"] = temp;
           req["RefCode"] = refCode;
           req["name"] = name;
           storeUserData("userData", { ...res, ...req });
+
+          Events.trigger("loginTrue");
         });
       } else {
         setLoader(false);
@@ -151,7 +158,7 @@ const OTPScreen = (props) => {
           });
           // Go To Dashboard
           var foundUser = { userId: userId, isLogin: true };
-          signIn(foundUser);
+          //signIn(foundUser);
           setLoader(false);
           // props.navigation.reset({
           //     index: 0,
@@ -422,21 +429,21 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     fontSize: f(1.6),
     fontFamily: fonts.semiBold,
-    borderWidth: 2,
-    color: colorCodes.black,
+    borderWidth: 1,
+    color: colorCodes.colorWhite,
     alignItems: "center",
     justifyContent: "center",
     borderColor: colorCodes.colorWhite,
-    backgroundColor: colorCodes.colorWhite,
+    backgroundColor: colorCodes.primaryColor,
     textAlign: "center",
     alignSelf: "center",
   },
   focusCell: {
     borderColor: colorCodes.colorWhite,
-    backgroundColor: colorCodes.colorWhite,
+    backgroundColor: colorCodes.primaryColor,
   },
   filledCell: {
-    backgroundColor: colorCodes.colorWhite,
+    backgroundColor: colorCodes.primaryColor,
   },
 });
 

@@ -11,6 +11,11 @@ import PassRequest from "./passRequest";
 import FavouriteParking from "./favouriteParking";
 import ContactUs from "./contactUs";
 import ReferAFriend from "./referAFriend";
+import ParkingDetail from "./parkingDetail";
+import FindParking from "./findParking";
+import BookingDetails from "./bookingDetails";
+import BookingSummary from "./bookingSummary";
+import BookingConfirmation from "./bookingConfirmation";
 const Stack = createNativeStackNavigator();
 
 function AuthStackNavigator() {
@@ -42,6 +47,15 @@ function AppStackNavigator() {
       <Stack.Screen name="FavouriteParking" component={FavouriteParking} />
       <Stack.Screen name="ContactUs" component={ContactUs} />
       <Stack.Screen name="ReferAFriend" component={ReferAFriend} />
+      <Stack.Screen name="ParkingDetail" component={ParkingDetail} />
+
+      <Stack.Screen name="FindParking" component={FindParking} />
+      <Stack.Screen name="BookingDetails" component={BookingDetails} />
+      <Stack.Screen name="BookingSummary" component={BookingSummary} />
+      <Stack.Screen
+        name="BookingConfirmation"
+        component={BookingConfirmation}
+      />
       <Stack.Screen
         name="VehicleRegisteration"
         component={VehicleRegisteration}

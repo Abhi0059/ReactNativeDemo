@@ -17,6 +17,7 @@ MERGED from [com.facebook.flipper:flipper-network-plugin:0.125.0] /Users/abhijee
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.125.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/f46d61f58d4e86a725986af1b2d73b97/transformed/jetified-flipper-fresco-plugin-0.125.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/901686751fac6c82a8f6294f566a5bb4/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:8:1-18:12
 MERGED from [:react-native-async-storage_async-storage] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_slider] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-community/slider/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-39:12
 MERGED from [:react-native-firebase_remote-config] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/remote-config/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-firebase_app] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/app/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-32:12
@@ -38,6 +39,8 @@ MERGED from [:react-native-safe-area-context] /Users/abhijeetsingh/My Data/React
 MERGED from [:react-native-screens] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:react-native-sms-retriever] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-sms-retriever/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-wheel-picker-android] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-wheel-picker-android/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-45:12
 MERGED from [com.facebook.react:react-android:0.71.2] /Users/abhijeetsingh/.gradle/caches/transforms-3/f777932ba30747d2e77add8c8aad13f9/transformed/jetified-react-android-0.71.2-debug/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:17:1-145:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/b19830b628ad472fa2d85db0d958e66c/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -168,6 +171,8 @@ MERGED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/Reac
 MERGED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-maps/lib/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-maps/lib/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-67
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/abhijeetsingh/.gradle/caches/transforms-3/c0a14f9ea8932a597ea9568dc7869cec/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/abhijeetsingh/.gradle/caches/transforms-3/c0a14f9ea8932a597ea9568dc7869cec/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
 MERGED from [com.google.firebase:firebase-config:21.2.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/557f8802e88afe0e4d48ddaa5004d813/transformed/jetified-firebase-config-21.2.1/AndroidManifest.xml:25:5-67
@@ -198,6 +203,8 @@ uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/android/app/src/main/AndroidManifest.xml:8:7-78
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/901686751fac6c82a8f6294f566a5bb4/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/901686751fac6c82a8f6294f566a5bb4/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:16:5-76
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-76
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:28:5-76
 	android:name
 		ADDED from /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/android/app/src/main/AndroidManifest.xml:8:24-75
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
@@ -210,6 +217,8 @@ uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/android/app/src/main/AndroidManifest.xml:10:5-80
 MERGED from [:react-native-fs] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
 MERGED from [:react-native-fs] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-fs/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-81
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:31:5-81
 	android:name
 		ADDED from /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/android/app/src/main/AndroidManifest.xml:10:22-78
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
@@ -276,6 +285,8 @@ MERGED from [:react-native-image-picker] /Users/abhijeetsingh/My Data/React Nati
 MERGED from [:react-native-image-picker] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-image-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:5-43:19
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:33:5-43:19
 MERGED from [com.facebook.react:react-android:0.71.2] /Users/abhijeetsingh/.gradle/caches/transforms-3/f777932ba30747d2e77add8c8aad13f9/transformed/jetified-react-android-0.71.2-debug/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-android:0.71.2] /Users/abhijeetsingh/.gradle/caches/transforms-3/f777932ba30747d2e77add8c8aad13f9/transformed/jetified-react-android-0.71.2-debug/AndroidManifest.xml:9:5-20
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:30:5-143:19
@@ -500,6 +511,8 @@ MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/abhijeetsingh/.gradle/
 MERGED from [com.facebook.flipper:flipper:0.125.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/901686751fac6c82a8f6294f566a5bb4/transformed/jetified-flipper-0.125.0/AndroidManifest.xml:11:5-13:41
 MERGED from [:react-native-async-storage_async-storage] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-async-storage_async-storage] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-async-storage/async-storage/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_slider] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-community/slider/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_slider] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-community/slider/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-firebase_remote-config] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/remote-config/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -542,6 +555,10 @@ MERGED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reac
 MERGED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-sms-retriever] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-sms-retriever/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-sms-retriever] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-sms-retriever/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-wheel-picker-android] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-wheel-picker-android/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-wheel-picker-android] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-wheel-picker-android/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-android:0.71.2] /Users/abhijeetsingh/.gradle/caches/transforms-3/f777932ba30747d2e77add8c8aad13f9/transformed/jetified-react-android-0.71.2-debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-android:0.71.2] /Users/abhijeetsingh/.gradle/caches/transforms-3/f777932ba30747d2e77add8c8aad13f9/transformed/jetified-react-android-0.71.2-debug/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:21:5-23:41
@@ -762,6 +779,8 @@ ADDED from /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/Rea
 		ADDED from /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/android/app/src/debug/AndroidManifest.xml:11:19-83
 uses-permission#android.permission.WAKE_LOCK
 ADDED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:5-68
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:19:5-68
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:25:5-68
 MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/2b7e15e85f8684ff7563950cbfdf71c2/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:26:5-68
@@ -772,6 +791,8 @@ MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users
 		ADDED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:react-native-firebase_messaging] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/@react-native-firebase/messaging/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-79
+MERGED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:25:5-79
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:26:5-79
 MERGED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/2b7e15e85f8684ff7563950cbfdf71c2/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:24:5-79
@@ -892,6 +913,20 @@ ADDED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/React
 		ADDED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
 	android:name
 		ADDED from [:react-native-share] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-share/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-55
+uses-permission#com.android.vending.CHECK_LICENSE
+ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-73
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-70
+provider#com.RNFetchBlob.Utils.FileProvider
+ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:9-42:20
+	android:grantUriPermissions
+		ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-47
+	android:authorities
+		ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:36:13-60
+	android:exported
+		ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:37:13-37
+	android:name
+		ADDED from [:rn-fetch-blob] /Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/rn-fetch-blob/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:35:13-62
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.work:work-runtime:2.7.1] /Users/abhijeetsingh/.gradle/caches/transforms-3/65f26e8ae40fc06f24a67619a2210287/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
 MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/abhijeetsingh/.gradle/caches/transforms-3/202292ed4d8ed739e0738ff68690a199/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20

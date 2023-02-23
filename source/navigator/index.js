@@ -4,6 +4,8 @@ import { AuthStackNavigator } from "../screens";
 import { NavigationContainer } from "@react-navigation/native";
 import Firebase from "@react-native-firebase/app";
 import PushNotification, { Importance } from "react-native-push-notification";
+import { getUserData } from "../utils/CommanServices";
+import Events from "../../source/utils/event";
 
 const firebaseConfig = {
   messagingSenderId: "964406149632",
@@ -48,7 +50,21 @@ class Source extends React.PureComponent {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    getUserData("userData").then((res) => {
+      console.log("userData on start", res);
+
+      this.setState({
+        userLogin: res.isLogin ? "true" : "false",
+      });
+    });
+
+    Events.on("loginTrue", "lt", () => {
+      this.setState({
+        userLogin: "true",
+      });
+    });
+  }
 
   getStack = () => {
     const { userLogin } = this.state;

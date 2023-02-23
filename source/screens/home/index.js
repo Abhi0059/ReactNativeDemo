@@ -514,7 +514,7 @@ const Home = (props) => {
                 });
               }
             }
-            props.navigation.push("ParkingDetails", {
+            props.navigation.push("ParkingDetail", {
               data: item,
               entries: response["images"],
               image: imgArr,

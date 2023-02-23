@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // @react-native-async-storage/async-storage
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+// @react-native-community/slider
+import com.reactnativecommunity.slider.ReactSliderPackage;
 // @react-native-firebase/app
 import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
 // @react-native-firebase/messaging
@@ -57,6 +59,10 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import cl.json.RNSharePackage;
 // react-native-sms-retriever
 import me.furtado.smsretriever.RNSmsRetrieverPackage;
+// react-native-wheel-picker-android
+import com.wheelpicker.WheelPickerPackage;
+// rn-fetch-blob
+import com.RNFetchBlob.RNFetchBlobPackage;
 
 public class PackageList {
   private Application application;
@@ -103,6 +109,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
+      new ReactSliderPackage(),
       new ReactNativeFirebaseAppPackage(),
       new ReactNativeFirebaseMessagingPackage(),
       new ReactNativeFirebaseConfigPackage(),
@@ -124,7 +131,9 @@ public class PackageList {
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new RNSharePackage(),
-      new RNSmsRetrieverPackage()
+      new RNSmsRetrieverPackage(),
+      new WheelPickerPackage(),
+      new RNFetchBlobPackage()
     ));
   }
 }
