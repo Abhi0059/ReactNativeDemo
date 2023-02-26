@@ -95,7 +95,7 @@ class DrawerMenu extends React.PureComponent {
   }
 
   componentDidMount() {
-    // this.checkData();
+    this.checkData();
   }
 
   checkData = () => {
@@ -178,6 +178,7 @@ class DrawerMenu extends React.PureComponent {
   render() {
     const { userImg, email, phone, name, city, appVersion } = this.state;
     const { navigation } = this.props;
+    console.log("phone", phone, " name", name);
     return (
       <View style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
@@ -204,6 +205,7 @@ class DrawerMenu extends React.PureComponent {
                       // onPress={() => props.navigation.navigate('Profile')}
                       style={{
                         marginTop: 5,
+                        marginLeft: 5,
                         fontFamily: fonts.regular,
                         fontSize: 16,
                         color: colorCodes.colorWhite,

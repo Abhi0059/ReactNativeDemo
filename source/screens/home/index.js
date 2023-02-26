@@ -12,6 +12,7 @@ import {
   Linking,
   Platform,
   StatusBar,
+  Pressable,
 } from "react-native";
 import Banner from "../../components/Banner";
 import NavigationServices from "../../utils/NavigationService";
@@ -36,6 +37,7 @@ import remoteConfig from "@react-native-firebase/remote-config";
 import DeviceInfo from "react-native-device-info";
 import { f, h } from "../../theme/responsive";
 import SplashScreen from "react-native-splash-screen";
+var menu = require("../../../assets/imgs/menu.png");
 // const firebaseConfig = {
 //   messagingSenderId: "964406149632",
 //   projectId: "eazypark-67b1a",
@@ -541,7 +543,23 @@ const Home = (props) => {
         barStyle={"dark-content"}
         translucent={false}
       /> */}
-
+      <TouchableOpacity
+        style={{
+          zIndex: 5,
+          position: "absolute",
+          left: 8,
+          top: 8,
+        }}
+        onPress={() => props.navigation.openDrawer()}
+      >
+        <Image
+          style={{
+            width: 50,
+            height: 50,
+          }}
+          source={menu}
+        />
+      </TouchableOpacity>
       {Object.keys(myCordinates).length === 0 ? null : (
         <MapComponent
           origin={origin}
