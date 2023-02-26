@@ -13,64 +13,148 @@ import { httpCall } from "../../utils/RestApi";
 import { getUserData } from "../../utils/CommanServices";
 import { Base64 } from "js-base64";
 
-const PassRequest = ({ props }) => {
-  const [requestPassList, setRequestPassList] = useState([]);
-  const [loadingText, setLoadingText] = useState("Searching for pass...");
-  const [loader, setLoader] = useState(false);
+class PassRequest extends React.PureComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      requestPassList: [],
+      loadingText: "Searching for pass...",
+      loader: false,
+    };
+  }
 
-  useEffect(() => {
-    //getRequestPass();
-  }, []);
+  componentDidMount() {
+    this.getRequestPass();
+  }
 
-  const getRequestPass = () => {
+  showLoader = (param) => {
+    this.setState({
+      loader: param,
+    });
+  };
+
+  getRequestPass = () => {
     getUserData("userData").then((data) => {
       let req = { userid: Base64.decode(data.UserId) };
       httpCall(apiName.GetPassRequetsList, req).then((res) => {
         console.log("GetPassRequetsList", res);
-        if (res.respCode) {
-          setRequestPassList(res.data);
-          if (res.data.length === 0) setLoadingText("No pass found");
-          else setLoadingText("");
+        if (res.respCode == 1 && res.data.length) {
+          this.setState({
+            loadingText: "",
+            requestPassList: res.data,
+          });
+        } else if (res.respCode == 1 && !res.data.length) {
+          this.setState({
+            loadingText: "No pass found",
+            requestPassList: [],
+          });
         } else {
-          setRequestPassList([]);
-          setLoadingText("No Pass found");
+          this.setState({
+            loadingText: "No pass found",
+            requestPassList: [],
+          });
         }
       });
     });
   };
 
-  return (
-    <View style={style.body}>
-      {loader ? <Loader /> : null}
-      <ScrollView>
-        {requestPassList.length > 0 ? (
-          requestPassList.map((pass) => (
-            <PassCard
-              key={pass.bookingid}
-              requestid={pass.requestid}
-              vehRegNumber={pass.vehRegNumber}
-              fromdate={pass.fromdate}
-              todate={pass.todate}
-              pnr={pass.pnr}
-              bookingstatus={pass.bookingstatus}
-              bookingtype={pass.bookingtype}
-              vehicleType={pass.vehicleType}
-              facility={pass.facility}
-              pass={pass}
-              setLoader={setLoader}
-              props={props}
-              status={pass.status}
-            />
-          ))
-        ) : (
-          <View>
-            <Text style={style.loadingText}>{loadingText}</Text>
-          </View>
-        )}
-      </ScrollView>
-    </View>
-  );
-};
+  render() {
+    const { loader, loadingText, requestPassList } = this.state;
+    const { navigation } = this.props;
+    return (
+      <View style={style.body}>
+        {loader ? <Loader /> : null}
+        <ScrollView>
+          {requestPassList.length > 0 ? (
+            requestPassList.map((pass) => (
+              <PassCard
+                key={pass.bookingid}
+                requestid={pass.requestid}
+                vehRegNumber={pass.vehRegNumber}
+                fromdate={pass.fromdate}
+                todate={pass.todate}
+                pnr={pass.pnr}
+                bookingstatus={pass.bookingstatus}
+                bookingtype={pass.bookingtype}
+                vehicleType={pass.vehicleType}
+                facility={pass.facility}
+                pass={pass}
+                setLoader={(value) => {
+                  this.showLoader(value);
+                }}
+                navigation={navigation}
+                status={pass.status}
+              />
+            ))
+          ) : (
+            <View>
+              <Text style={style.loadingText}>{loadingText}</Text>
+            </View>
+          )}
+        </ScrollView>
+      </View>
+    );
+  }
+}
+
+// const PassRequest = ({ props }) => {
+//   const [requestPassList, setRequestPassList] = useState([]);
+//   const [loadingText, setLoadingText] = useState("Searching for pass...");
+//   const [loader, setLoader] = useState(false);
+
+//   useEffect(() => {
+//     //getRequestPass();
+//   }, []);
+
+//   const getRequestPass = () => {
+//     getUserData("userData").then((data) => {
+//       let req = { userid: Base64.decode(data.UserId) };
+//       httpCall(apiName.GetPassRequetsList, req).then((res) => {
+//         console.log("GetPassRequetsList", res);
+//         if (res.respCode) {
+//           setRequestPassList(res.data);
+//           if (res.data.length === 0) setLoadingText("No pass found");
+//           else setLoadingText("");
+//         } else {
+//           setRequestPassList([]);
+//           setLoadingText("No Pass found");
+//         }
+//       });
+//     });
+//   };
+
+//   return (
+//     <View style={style.body}>
+//       {loader ? <Loader /> : null}
+//       <ScrollView>
+//         {requestPassList.length > 0 ? (
+//           requestPassList.map((pass) => (
+//             <PassCard
+//               key={pass.bookingid}
+//               requestid={pass.requestid}
+//               vehRegNumber={pass.vehRegNumber}
+//               fromdate={pass.fromdate}
+//               todate={pass.todate}
+//               pnr={pass.pnr}
+//               bookingstatus={pass.bookingstatus}
+//               bookingtype={pass.bookingtype}
+//               vehicleType={pass.vehicleType}
+//               facility={pass.facility}
+//               pass={pass}
+//               setLoader={setLoader}
+//               props={props}
+//               status={pass.status}
+//             />
+//           ))
+//         ) : (
+//           <View>
+//             <Text style={style.loadingText}>{loadingText}</Text>
+//           </View>
+//         )}
+//       </ScrollView>
+//     </View>
+//   );
+// };
 
 const Loader = () => {
   return (

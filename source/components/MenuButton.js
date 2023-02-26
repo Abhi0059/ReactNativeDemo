@@ -29,7 +29,7 @@ const MenuButton = (props) => {
           renderContent={() => (
             <View style={{ marginLeft: 20, marginRight: 20 }}>
               <TouchableOpacity
-                onPress={() => props.nav.navigation.navigate("RequestPassTab")}
+                onPress={() => props.nav.navigation.navigate("MyPasses")}
                 style={[
                   styles.menuView,
                   {

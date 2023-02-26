@@ -62,11 +62,11 @@ const ContactUs = (props) => {
             <View style={styles.header}>
               <View
                 style={styles.headerTitleWrapper}
-                onPress={() => props.navigation.replace("Dashboard")}
+                onPress={() => props.navigation.replace("Home")}
               >
                 <TouchableOpacity
                   style={styles.backBtn}
-                  onPress={() => props.navigation.replace("Dashboard")}
+                  onPress={() => props.navigation.replace("Home")}
                 >
                   <Image
                     onPress={() => this.select(index, item)}
@@ -956,7 +956,7 @@ const submit = async (subject, msg) => {
   };
   const shareResponse = await Share.shareSingle(shareOptions);
   commanService.createSimpleToast("Details Saved", "success");
-  nav.navigation.navigate("Dashboard");
+  nav.navigation.navigate("Home");
 };
 
 const styles = StyleSheet.create({

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import { getUserData } from "../../../services/CommanServices";
+import { getUserData } from "../utils/CommanServices";
 import { Base64 } from "js-base64";
 import ImageView from "react-native-image-viewing";
-import { apiName } from "../../../shared/Config";
-import { httpCall } from "../../../services/RestApi";
-import { h, w } from "../../../theme/responsive";
+import { apiName } from "../../Config";
+import { httpCall } from "../utils/RestApi";
+import { h, w } from "../theme/responsive";
 const PassDetails = (props) => {
   var pass = props.route.params.pass;
   console.log(pass);
@@ -37,9 +37,10 @@ const PassDetails = (props) => {
   //     alert('Document not found');
   //   }
   // }
+  console.log("first", props);
   return (
     <View style={styles.body}>
-      <Close action={props.route.params.props} />
+      <Close action={props} />
       <View style={{ margin: 10 }}>
         {/* <View style={styles.fieldView}>
           <Fields title={'Name'} value={pass.name} />
@@ -51,8 +52,8 @@ const PassDetails = (props) => {
           <Image
             source={
               pass.vehicleType == 1
-                ? require("../../../../assets/imgs/Sccoter_big.png")
-                : require("../../../../assets/imgs/carVector.png")
+                ? require("../../assets/imgs/Sccoter_big.png")
+                : require("../../assets/imgs/carVector.png")
             }
             style={styles.img}
           />
@@ -103,7 +104,7 @@ const PassDetails = (props) => {
             <Fields title={"Facility Name"} value={pass.facility.name} />
             <View style={{ flexDirection: "row", marginTop: 5 }}>
               <Image
-                source={require("../../../../assets/imgs/blackPin.png")}
+                source={require("../../assets/imgs/blackPin.png")}
                 style={styles.locIcon}
               />
               <Text style={[styles.time, { marginTop: 1 }]}>
@@ -226,7 +227,7 @@ const Close = ({ action }) => {
       onPress={() => action.navigation.goBack()}
     >
       <Image
-        source={require("../../../../assets/imgs/close.png")}
+        source={require("../../assets/imgs/close.png")}
         style={styles.closeIcon}
       />
     </TouchableOpacity>

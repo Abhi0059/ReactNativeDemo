@@ -832,7 +832,7 @@ export default class BookingSummary extends Component {
                         borderBottomRightRadius: 5,
                       }}
                       onPress={() => {
-                        this.props.navigation.navigate("Dashboard");
+                        this.props.navigation.navigate("Home");
                         // this.props.navigation.navigate('FindParking', {
                         //   parkingName: this.state.parkingDetails.name,
                         // })

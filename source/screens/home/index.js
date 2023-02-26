@@ -11,6 +11,7 @@ import {
   Alert,
   Linking,
   Platform,
+  StatusBar,
 } from "react-native";
 import Banner from "../../components/Banner";
 import NavigationServices from "../../utils/NavigationService";
@@ -34,7 +35,7 @@ import Loader from "../../components/Loader";
 import remoteConfig from "@react-native-firebase/remote-config";
 import DeviceInfo from "react-native-device-info";
 import { f, h } from "../../theme/responsive";
-
+import SplashScreen from "react-native-splash-screen";
 // const firebaseConfig = {
 //   messagingSenderId: "964406149632",
 //   projectId: "eazypark-67b1a",
@@ -159,6 +160,7 @@ const Home = (props) => {
 
   useEffect(() => {
     console.log("Dashboard");
+    SplashScreen.hide();
     setTimeout(() => {
       checkForGps();
     }, 3500);
@@ -198,9 +200,9 @@ const Home = (props) => {
       }
 
       props.navigation.addListener("focus", () => {
-        //  upComingParkings();
+        upComingParkings();
       });
-      // upComingParkings();
+      upComingParkings();
     });
     setTimeout(() => {
       remoteConfig().fetch(1);
@@ -534,6 +536,12 @@ const Home = (props) => {
   return (
     <SafeAreaView style={styles.main}>
       {showLoader ? <Loader /> : null}
+      {/* <StatusBar
+        backgroundColor={"#fff"}
+        barStyle={"dark-content"}
+        translucent={false}
+      /> */}
+
       {Object.keys(myCordinates).length === 0 ? null : (
         <MapComponent
           origin={origin}

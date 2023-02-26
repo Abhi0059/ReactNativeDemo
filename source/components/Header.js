@@ -1,50 +1,29 @@
 import React from "react";
-import {
-  SafeAreaView,
-  View,
-  Text,
-  StyleSheet,
-  Image,
-  TouchableOpacity,
-} from "react-native";
-import colorCodes from "../themes/colorCodes";
-import fonts from "../themes/fonts";
-var backbutton = require("../../assets/imgs/backbutton.png");
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 
-const Header = (props) => {
-  console.log(props);
-
-  const goBack = () => {
-    console.log("TEST");
-  };
-
+const Header = ({ props, title }) => {
   return (
-    <SafeAreaView>
-      <View style={styles.main}>
-        <TouchableOpacity style={styles.backbutton} onPress={goBack}>
-          <Image style={styles.backimg} source={backbutton} />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>{props.title}</Text>
-      </View>
-    </SafeAreaView>
+    <View style={styles.body}>
+      <TouchableOpacity onPress={() => props.navigation.goBack()}>
+        <Image
+          style={styles.img}
+          source={require("../../assets/imgs/backbutton.png")}
+        />
+      </TouchableOpacity>
+      <Text style={styles.title}>{title}</Text>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  main: { flexDirection: "row", margin: 3 },
-  backbutton: {
-    position: "relative",
-    padding: 10,
-    borderRadius: 50,
-    marginLeft: 5,
+  body: {
+    flexDirection: "row",
+    marginBottom: 20,
+    marginTop: 5,
+    backgroundColor: "#fff",
   },
-  backimg: { width: 23, height: 23 },
-  headerText: {
-    fontFamily: fonts.semiBold,
-    color: colorCodes.textColor,
-    textAlignVertical: "center",
-    fontSize: 15,
-  },
+  title: { fontFamily: "Segoe_UI_semi_Bold" },
+  img: { width: 25, height: 25, marginRight: 10 },
 });
 
 export default Header;

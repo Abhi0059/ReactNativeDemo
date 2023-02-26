@@ -14,7 +14,7 @@ const PassCard = ({
   facility,
   pass,
   setLoader,
-  props,
+  navigation,
   status,
   bookingid,
   showQrCode,
@@ -66,8 +66,8 @@ const PassCard = ({
     <TouchableOpacity
       style={styles.body}
       onPress={() =>
-        props.navigation.navigate("PassDetails", {
-          props: props,
+        navigation.navigate("PassDetails", {
+          navigation: navigation,
           pass: pass,
           fromdate: time.fromdate,
           todate: time.todate,

@@ -54,7 +54,6 @@ class RequestPass extends React.PureComponent {
       selectedLocList: {},
       locationSearchText: "",
       searchingText: "please search and select facility",
-
       towerNoText: "",
       flatNoText: "",
       docImg: "",
@@ -70,36 +69,57 @@ class RequestPass extends React.PureComponent {
     };
   }
   componentDidMount() {
-    // this.getVehicles();
+    this.getVehicles();
   }
 
-  getVehicles() {
+  getVehicles = () => {
     getUserData("userData").then((data) => {
       let vehDef = { vehNo: data.defaultVehicle, vehType: data.vehicleType };
-      setDefaultVehicle(vehDef);
+
       httpGet(apiName.getVehicle + Base64.decode(data.UserId)).then((res) => {
         if (res.respCode) {
           this.setState({
             vehList: res.details,
+            defaultVehicle: vehDef,
           });
         } else {
           this.setState({
             vehList: [],
+            defaultVehicle: vehDef,
           });
         }
       });
     });
-  }
+  };
 
-  openModal() {
+  openModal = () => {
     this.setState({ modalVisible: true });
-  }
+  };
 
-  openLocationModal() {
+  openLocationModal = () => {
+    console.log("openLocationModal");
     this.setState({ modalLocationVisible: true });
-  }
+  };
 
-  setVehicle(item) {
+  setSearchedFacility = (id) => {
+    this.setState(
+      {
+        formDataToSend: {},
+        facilityidSearch: id,
+      },
+      () => {
+        this.getFacilities(id);
+      }
+    );
+  };
+
+  goToQrScanner = () => {
+    const { navigation } = this.props;
+    navigation.navigate("QrScanner", {
+      setSearchedFacility: this.setSearchedFacility,
+    });
+  };
+  setVehicle = (item) => {
     console.log("item", item);
     getUserData("userData").then((res) => {
       var a = res;
@@ -116,9 +136,9 @@ class RequestPass extends React.PureComponent {
         modalVisible: false,
       });
     });
-  }
+  };
 
-  setLocation(item) {
+  setLocation = (item) => {
     // let LocDef = {
     //   facilityid: item.facilityid,
     //   facName: item.name,
@@ -133,9 +153,10 @@ class RequestPass extends React.PureComponent {
       facAddress: item.address,
       modalLocationVisible: false,
     });
-  }
+  };
 
   getFacilities = (id) => {
+    const { locationSearchText } = this.state;
     const { template } = this.state;
     this.setState({
       searchingText: "Searching facilities...",
@@ -178,7 +199,7 @@ class RequestPass extends React.PureComponent {
     });
   };
 
-  onSubmit() {
+  onSubmit = () => {
     const { template } = this.state;
     for (let i = 0; i < template.length; i++) {
       const { mandatory, fieldlabel, fieldtype, fieldvalue } = template[i];
@@ -193,9 +214,9 @@ class RequestPass extends React.PureComponent {
       }
     }
     submit();
-  }
+  };
 
-  submit() {
+  submit = () => {
     const { facilityidSearch, defaultVehicle, docFileName } = this.state;
     var findDate = moment("Tue Jan 01 2021 00:00:00 GMT+0530 (IST)");
     var start = moment(startDate);
@@ -241,9 +262,9 @@ class RequestPass extends React.PureComponent {
         }
       });
     });
-  }
+  };
 
-  launchCamera() {
+  launchCamera = () => {
     console.log("launchCamera");
     SheetManager.hideAll();
     launch_Camera().then((res) => {
@@ -268,12 +289,549 @@ class RequestPass extends React.PureComponent {
         });
       }
     });
-  }
+  };
+
+  onChangelocationSearchText = (value) => {
+    this.setState({
+      locationSearchText: value,
+    });
+  };
 
   render() {
+    const {
+      loader,
+      modalVisible,
+      defaultVehicle,
+      facilityid,
+      facName,
+      facAddress,
+      docFieldName,
+      formDataToSend,
+      docFileName,
+      modalLocationVisible,
+      vehList,
+      LocList,
+      selectedLocList,
+      locationSearchText,
+      searchingText,
+      towerNoText,
+      flatNoText,
+      docImg,
+      docInfo,
+      nameText,
+      openStartDate,
+      openEndDate,
+      startDate,
+      endDate,
+      facilityidSearch,
+      template,
+    } = this.state;
+
+    const { navigation } = this.props;
+
     return (
-      <View>
-        <Text>dasd</Text>
+      <View style={style.body}>
+        {loader ? <Loader /> : null}
+        {/* {//choosevehicle Popup} */}
+        <Overlay
+          visible={modalVisible}
+          onClose={() => this.setState({ modalVisible: false })}
+          closeOnTouchOutside
+          animationType={"zoomIn"}
+          childrenWrapperStyle={{ borderWidth: 1, borderRadius: 5 }}
+        >
+          <View style={{ width: "100%" }}>
+            <View style={{ flexDirection: "row" }}>
+              <Text
+                style={{
+                  fontFamily: "Segoe_UI_semi_Bold",
+                  color: "#707070",
+                  fontSize: 16,
+                  paddingLeft: 20,
+                }}
+              >
+                Choose Vehicle
+              </Text>
+              <TouchableOpacity
+                style={{ position: "absolute", right: 0, top: -5 }}
+                onPress={() => {
+                  this.setState({ modalVisible: false });
+                }}
+              >
+                <Image
+                  style={{ width: 30, height: 30 }}
+                  source={require("../../../assets/imgs/close.png")}
+                />
+              </TouchableOpacity>
+            </View>
+            <ScrollView style={{ marginTop: 10, marginBottom: 20 }}>
+              {vehList.map((veh) => (
+                <VehicleList
+                  vehRegNumber={veh.vehRegNumber}
+                  vehicleType={veh.vehicleType}
+                  defaultVehicle={defaultVehicle}
+                  setVehicle={this.setVehicle}
+                  data={veh}
+                  key={veh.id}
+                />
+              ))}
+            </ScrollView>
+          </View>
+        </Overlay>
+
+        {/* {//chooseLocation Popup} */}
+        <Overlay
+          visible={modalLocationVisible}
+          onClose={() =>
+            this.setState({
+              modalLocationVisible: false,
+            })
+          }
+          closeOnTouchOutside
+          animationType={"zoomIn"}
+          childrenWrapperStyle={{ borderWidth: 1, borderRadius: 5 }}
+        >
+          <View style={{ width: "100%", height: "100%" }}>
+            <View style={{ flexDirection: "row" }}>
+              <Text
+                style={{
+                  fontFamily: "Segoe_UI_semi_Bold",
+                  color: "#707070",
+                  fontSize: 16,
+                  paddingLeft: 20,
+                }}
+              >
+                Search Location
+              </Text>
+              <TouchableOpacity
+                style={{ position: "absolute", right: 0, top: -5 }}
+                onPress={() => {
+                  this.setState({
+                    modalLocationVisible: false,
+                  });
+                }}
+              >
+                <Image
+                  style={{ width: 30, height: 30 }}
+                  source={require("../../../assets/imgs/close.png")}
+                />
+              </TouchableOpacity>
+            </View>
+            <View
+              style={{
+                flexDirection: "row",
+                paddingTop: 30,
+                marginBottom: 10,
+                justifyContent: "space-between",
+                width: "100%",
+              }}
+            >
+              <TextInput
+                onChangeText={(value) => this.onChangelocationSearchText(value)}
+                value={locationSearchText}
+                style={{
+                  borderWidth: 0.5,
+                  borderRadius: 5,
+                  width: "68%",
+                  height: 45,
+                  borderColor: "#707070",
+                  color: "#01313C",
+                  paddingLeft: 10,
+                  fontFamily: "Segoe_UI_semi_Bold",
+                }}
+              />
+              <GradientButton
+                name="   Search   "
+                buttonHandle={() => this.getFacilities("")}
+              />
+            </View>
+            <ScrollView style={{ marginTop: 10, marginBottom: 20 }}>
+              {LocList.length > 0 ? (
+                LocList.map((loc) => (
+                  <LocationList
+                    name={loc.name}
+                    address={loc.address}
+                    facilityid={loc.facilityid}
+                    data={loc}
+                    key={loc.facilityid}
+                    setLocation={setLocation}
+                  />
+                ))
+              ) : (
+                <Text
+                  style={{
+                    textAlign: "center",
+                    color: "#01313C",
+                    fontFamily: "Segoe_UI_semi_Bold",
+                  }}
+                >
+                  {searchingText}
+                </Text>
+              )}
+            </ScrollView>
+          </View>
+        </Overlay>
+
+        {/* {//Choose upload way Popup} */}
+        <ActionSheet id="upload_sheet">
+          <View style={{ flexDirection: "column" }}>
+            <View style={style.menuView}>
+              <Image
+                style={style.menuIcon}
+                source={require("../../../assets/imgs/camera.png")}
+              />
+              <Text style={style.menuText} onPress={() => this.launchCamera()}>
+                Upload From Camera
+              </Text>
+              <Image
+                style={style.menuIconBack}
+                source={require("../../../assets/imgs/whitebackbutton.png")}
+              />
+            </View>
+            <View style={style.menuView}>
+              <Image
+                style={style.menuIcon}
+                source={require("../../../assets/imgs/gallery.png")}
+              />
+              <Text style={style.menuText} onPress={() => this.launchGallery()}>
+                Upload From Gallery
+              </Text>
+              <Image
+                style={style.menuIconBack}
+                source={require("../../../assets/imgs/whitebackbutton.png")}
+              />
+            </View>
+          </View>
+        </ActionSheet>
+
+        <ScrollView>
+          <SelectVehicle data={defaultVehicle} openModal={this.openModal} />
+          <Pressable
+            onPress={() => {
+              navigation.navigate("AddVehicle", { from: "RequestPass" });
+            }}
+            style={{
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 10,
+            }}
+          >
+            <Text
+              style={{
+                color: "blue",
+                fontFamily: "Segoe_UI_semi_Bold",
+                textDecorationLine: "underline",
+              }}
+            >
+              Add New Vehicle
+            </Text>
+          </Pressable>
+          {/* {defaultLocation.facilityid == 0 ? (
+          <View style={{marginLeft: 20, marginRight: 20, marginTop: 10}}>
+            <TouchableOpacity
+              onPress={() => openLocationModal()}
+              editable={false}
+              style={{
+                borderWidth: 0.5,
+                borderRadius: 5,
+                height: 50,
+                borderColor: '#707070',
+                color: '#01313C',
+                paddingLeft: 10,
+                fontFamily: 'Segoe_UI_semi_Bold',
+              }}></TouchableOpacity>
+          </View>
+        ) : (
+          <SelectLocation
+            openModal={openLocationModal}
+            defaultLocation={defaultLocation}
+          />
+        )} */}
+          <View
+            style={{
+              flexDirection: "row",
+              width: "100%",
+              marginTop: 15,
+              justifyContent: "space-evenly",
+            }}
+          >
+            <View style={{ width: "45%" }}>
+              <GradientButton
+                name="Scan QR"
+                buttonHandle={() => this.goToQrScanner()}
+              />
+            </View>
+
+            <View style={{ width: "45%" }}>
+              <GradientButton
+                name="Search facility"
+                buttonHandle={() => this.openLocationModal()}
+              />
+            </View>
+          </View>
+
+          <View
+            style={{
+              width: "100%",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 5,
+            }}
+          >
+            <Text
+              style={{
+                fontFamily: "Segoe_UI_semi_Bold",
+                color: "grey",
+                fontSize: 12,
+              }}
+            >
+              Search/Scan QR for the facility you are requesting
+            </Text>
+          </View>
+
+          {openStartDate ? (
+            <DatePicker
+              modal
+              minimumDate={new Date("2021-01-01")}
+              //maximumDate={currentDate}
+              open={openStartDate}
+              date={startDate}
+              mode={"date"}
+              onConfirm={(date) => {
+                this.setState({
+                  startDate: date,
+                  openStartDate: false,
+                });
+              }}
+              onCancel={() => {
+                this.setState({
+                  openStartDate: false,
+                });
+              }}
+            />
+          ) : (
+            <View />
+          )}
+
+          {openEndDate ? (
+            <DatePicker
+              modal
+              minimumDate={startDate}
+              //maximumDate={currentDate}
+              open={openEndDate}
+              date={endDate}
+              mode={"date"}
+              onConfirm={(date) => {
+                this.setState({
+                  endDate: date,
+                  openEndDate: false,
+                });
+              }}
+              onCancel={() => {
+                this.setState({
+                  openEndDate: false,
+                });
+              }}
+            />
+          ) : (
+            <View />
+          )}
+
+          {facilityidSearch ? (
+            <View>
+              <View
+                style={{
+                  width: "100%",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: 5,
+                }}
+              >
+                <Text
+                  style={{
+                    fontSize: 16,
+                    color: "#000000",
+                    fontFamily: "Segoe_UI_semi_Bold",
+                    marginTop: 15,
+                  }}
+                >
+                  {LocList.length
+                    ? `Facility Name - ${selectedLocList["name"]}`
+                    : ""}
+                </Text>
+              </View>
+              {/* <View
+              style={{
+                width: '100%',
+                flexDirection: 'row',
+                justifyContent: 'space-evenly',
+              }}>
+              <View style={{width: '40%'}}>
+                <Text
+                  style={{
+                    color: '#707070',
+                    fontFamily: 'Segoe_UI_semi_Bold',
+                    marginTop: 10,
+                  }}>
+                  Start Date
+                </Text>
+                <Pressable
+                  onPress={() => {
+                    setOpenStartDate(true);
+                  }}
+                  style={{
+                    borderWidth: 0.5,
+                    borderColor: '#707070',
+                    padding: 10,
+                    borderRadius: 5,
+                  }}>
+                  <Text>{moment(startDate).format('DD-MMM-YYYY')}</Text>
+                </Pressable>
+              </View>
+              <View style={{width: '40%'}}>
+                <Text
+                  style={{
+                    color: '#707070',
+                    fontFamily: 'Segoe_UI_semi_Bold',
+                    marginTop: 10,
+                  }}>
+                  End Date
+                </Text>
+                <Pressable
+                  onPress={() => {
+                    setOpenEndDate(true);
+                  }}
+                  style={{
+                    borderWidth: 0.5,
+                    borderColor: '#707070',
+                    padding: 10,
+                    borderRadius: 5,
+                  }}>
+                  <Text>{moment(endDate).format('DD-MMM-YYYY')}</Text>
+                </Pressable>
+              </View>
+            </View> */}
+              {template && template.length ? (
+                template.map((data, index) => {
+                  const { fieldlabel, fieldvalue, fieldtype, mandatory } = data;
+                  if (fieldtype === "input") {
+                    return (
+                      <View
+                        style={{
+                          marginLeft: 20,
+                          marginRight: 20,
+                          marginTop: 10,
+                        }}
+                      >
+                        <TextInput
+                          // onLayout={() => {
+                          //   setFormData({...formDataToSend, [fieldvalue]: ''});
+                          // }}
+                          onChangeText={(value) => {
+                            this.setState({
+                              formDataToSend: {
+                                ...formDataToSend,
+                                [fieldvalue]: value,
+                              },
+                            });
+                          }}
+                          value={formDataToSend?.[fieldvalue]}
+                          placeholder={fieldlabel}
+                          style={{
+                            borderWidth: 0.5,
+                            borderRadius: 5,
+                            borderColor: "#707070",
+                            color: "#01313C",
+                            paddingLeft: 10,
+                            fontFamily: "Segoe_UI_semi_Bold",
+                          }}
+                        />
+                      </View>
+                    );
+                  } else {
+                    return (
+                      <View
+                      // onLayout={() => {
+                      //   setFormData({...formDataToSend, [fieldvalue]: ''});
+                      // }}
+                      >
+                        <Text
+                          style={{
+                            marginLeft: 20,
+                            color: "#707070",
+                            fontFamily: "Segoe_UI_semi_Bold",
+                            marginTop: 15,
+                          }}
+                        >
+                          Upload Id Proof
+                        </Text>
+                        <View
+                          style={{
+                            marginLeft: 20,
+                            marginRight: 20,
+                            marginTop: 10,
+                          }}
+                        >
+                          <TouchableOpacity
+                            onPress={() => {
+                              this.setState({
+                                docFieldName: fieldvalue,
+                              });
+
+                              SheetManager.show("upload_sheet");
+                            }}
+                            editable={false}
+                            style={{
+                              borderWidth: 0.5,
+                              borderRadius: 5,
+                              height: 50,
+                              borderColor: "#707070",
+                              color: "#01313C",
+                              paddingLeft: 10,
+                              fontFamily: "Segoe_UI_semi_Bold",
+                            }}
+                          >
+                            <Text
+                              style={{
+                                color: "#707070",
+                                fontFamily: "Segoe_UI_semi_Bold",
+                                marginTop: 15,
+                              }}
+                            >
+                              Click here to open camera
+                            </Text>
+                          </TouchableOpacity>
+                          {docImg ? (
+                            <Image
+                              style={{
+                                width: 80,
+                                height: 80,
+                                overflow: "hidden",
+                                borderWidth: 0.1,
+                              }}
+                              source={{ uri: docImg }}
+                            />
+                          ) : null}
+                        </View>
+                      </View>
+                    );
+                  }
+                })
+              ) : (
+                <View />
+              )}
+              <View style={{ margin: 20, marginTop: 30 }}>
+                <GradientButton
+                  name="Request Pass"
+                  buttonHandle={() => this.onSubmit()}
+                />
+              </View>
+            </View>
+          ) : (
+            <View />
+          )}
+        </ScrollView>
       </View>
     );
   }

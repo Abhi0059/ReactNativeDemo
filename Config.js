@@ -12,12 +12,12 @@ export const apiVersion = "1.0";
 // export const apiVersion = "1.0";
 
 //Production;
-export const url = {
-  baseUrl: "http://eazyparkapp.incubermax.com/",
-};
 // export const url = {
-//   baseUrl: 'http://184.168.126.119/',
+//   baseUrl: "http://eazyparkapp.incubermax.com/",
 // };
+export const url = {
+  baseUrl: "http://184.168.126.119/",
+};
 
 export const apiName = {
   createOtp: "OTP/OTPGeneration/CreateOTP",
@@ -49,11 +49,8 @@ export const apiName = {
   guestParking: "ParkingAPI/Parking/GuestParking",
   GetPassList: "ParkingAPI/Parking/GetPassList",
   GetPassRequetsList: "ParkingAPI/Parking/GetPassRequetsList",
-
   SendPassRequets: "ParkingAPI/Parking/SendPassRequets",
-
   GetCheckInCheckOutReport: "ReportAPI/Report/GetCheckInCheckOutReport",
-
   GetFacilityListForPass: `Geolocation/Location/GetFacilityListForPass`,
   getUserProfile: `myprofile/myprofile/GetUserProfile`,
   setUserProfile: `myprofile/myprofile/SetUserProfile`,

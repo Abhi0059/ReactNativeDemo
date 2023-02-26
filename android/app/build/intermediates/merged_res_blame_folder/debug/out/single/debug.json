@@ -1,46 +1,78 @@
 [
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/layout_launch_screen.xml.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/layout/launch_screen.xml"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable-xxhdpi_launch_screen.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable-xxhdpi/launch_screen.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-ldpi_ic_launcher.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-ldpi/ic_launcher.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable-xhdpi_launch_screen.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable-xhdpi/launch_screen.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/drawable_rn_edit_text_material.xml.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/drawable/rn_edit_text_material.xml"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable-xxxhdpi_launch_screen.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable-xxxhdpi/launch_screen.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable/rn_edit_text_material.xml"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.incubermax.eazypark.app-merged_res-40:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.incubermax.eazypark.app-main-42:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable-mdpi_launch_screen.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable-mdpi/launch_screen.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable_launch_screen.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable/launch_screen.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/drawable-hdpi_launch_screen.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/drawable-hdpi/launch_screen.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.incubermax.eazypark.app-merged_res-41:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.incubermax.eazypark.app-main-43:/mipmap-xxhdpi/ic_launcher.png"
     }
 ]

@@ -139,7 +139,7 @@ export default class ReferAFriend extends Component {
   }
 
   onBackPress = () => {
-    this.props.navigation.replace("Dashboard");
+    this.props.navigation.replace("Home");
     return true;
   };
 
@@ -504,11 +504,11 @@ export default class ReferAFriend extends Component {
         <View style={styles.header}>
           <View
             style={styles.headerTitleWrapper}
-            onPress={() => this.props.navigation.replace("Dashboard")}
+            onPress={() => this.props.navigation.replace("Home")}
           >
             <TouchableOpacity
               style={styles.backBtn}
-              onPress={() => this.props.navigation.replace("Dashboard")}
+              onPress={() => this.props.navigation.replace("Home")}
             >
               <Image
                 onPress={() => this.select(index, item)}

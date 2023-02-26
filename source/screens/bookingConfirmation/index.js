@@ -63,7 +63,7 @@ export default class BookingConfirmation extends Component {
   }
 
   onBackPress = () => {
-    this.props.navigation.navigate("Dashboard");
+    this.props.navigation.navigate("Home");
     return true;
   };
 
@@ -95,7 +95,7 @@ export default class BookingConfirmation extends Component {
 
   continue() {
     // alert("Book Parking")
-    this.props.navigation.navigate("Dashboard", {
+    this.props.navigation.navigate("Home", {
       data: this.state.parkingDetails,
     });
   }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   SafeAreaView,
   TouchableOpacity,
@@ -16,7 +16,7 @@ import {
   getUserData,
   storeUserData,
 } from "../../utils/CommanServices";
-
+import SplashScreen from "react-native-splash-screen";
 var intro1 = require("../../../assets/imgs/intro1.png");
 var intro2 = require("../../../assets/imgs/intro2.png");
 var intro3 = require("../../../assets/imgs/intro3.png");
@@ -50,6 +50,9 @@ const IntroCard = (props) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const _carousel = useRef(null);
 
+  useEffect(() => {
+    SplashScreen.hide();
+  });
   const skipPage = () => {
     getUserData("userData").then((res) => {
       let d = { isIntroPage: false };

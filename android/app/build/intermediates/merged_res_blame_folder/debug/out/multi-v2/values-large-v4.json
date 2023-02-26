@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.incubermax.eazypark.app-mergeDebugResources-38:/values-large-v4/values-large-v4.xml",
+            "outputFile": "com.incubermax.eazypark.app-mergeDebugResources-39:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "/Users/abhijeetsingh/.gradle/caches/transforms-3/a43a2f8fd29548f4d05641fe3484fe8c/transformed/appcompat-1.4.1/res/values-large-v4/values-large-v4.xml",

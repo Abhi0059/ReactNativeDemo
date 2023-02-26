@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.incubermax.eazypark.app-mergeDebugResources-38:/values-fi/values-fi.xml",
+            "outputFile": "com.incubermax.eazypark.app-mergeDebugResources-39:/values-fi/values-fi.xml",
             "map": [
                 {
                     "source": "/Users/abhijeetsingh/My Data/React Native/Reactnative/NewEazyPark/ReactNativeDemo/node_modules/react-native-date-picker/android/build/intermediates/packaged_res/debug/values-fi/values-fi.xml",

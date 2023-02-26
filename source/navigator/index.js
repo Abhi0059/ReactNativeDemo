@@ -46,7 +46,7 @@ class Source extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      userLogin: "false",
+      userLogin: "",
     };
   }
 
@@ -55,7 +55,7 @@ class Source extends React.PureComponent {
       console.log("userData on start", res);
 
       this.setState({
-        userLogin: res.isLogin ? "true" : "false",
+        userLogin: res?.isLogin ? "true" : "false",
       });
     });
 

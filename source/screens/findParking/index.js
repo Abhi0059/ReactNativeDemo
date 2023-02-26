@@ -557,7 +557,7 @@ export default class FindParking extends Component {
                   fontWeight: "600",
                 }}
                 onPress={() => {
-                  this.props.navigation.replace("Dashboard");
+                  this.props.navigation.replace("Home");
                 }}
               >
                 CONTINUE

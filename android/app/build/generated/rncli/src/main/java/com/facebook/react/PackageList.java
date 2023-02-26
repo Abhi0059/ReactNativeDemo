@@ -23,6 +23,8 @@ import io.invertase.firebase.messaging.ReactNativeFirebaseMessagingPackage;
 import io.invertase.firebase.config.ReactNativeFirebaseConfigPackage;
 // react-native-android-location-enabler
 import com.heanoria.library.reactnative.locationenabler.RNAndroidLocationEnablerPackage;
+// react-native-camera
+import org.reactnative.camera.RNCameraPackage;
 // react-native-date-picker
 import com.henninghall.date_picker.DatePickerPackage;
 // react-native-device-info
@@ -43,6 +45,8 @@ import com.airbnb.android.react.maps.MapsPackage;
 import com.farzadmarius.rnminimizeapp.RNMinimizeAppPackage;
 // react-native-otp-verify
 import com.faizal.OtpVerify.OtpVerifyPackage;
+// react-native-pager-view
+import com.reactnativepagerview.PagerViewPackage;
 // react-native-push-notification
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 // react-native-rate
@@ -59,6 +63,8 @@ import com.swmansion.rnscreens.RNScreensPackage;
 import cl.json.RNSharePackage;
 // react-native-sms-retriever
 import me.furtado.smsretriever.RNSmsRetrieverPackage;
+// react-native-splash-screen
+import org.devio.rn.splashscreen.SplashScreenReactPackage;
 // react-native-wheel-picker-android
 import com.wheelpicker.WheelPickerPackage;
 // rn-fetch-blob
@@ -114,6 +120,7 @@ public class PackageList {
       new ReactNativeFirebaseMessagingPackage(),
       new ReactNativeFirebaseConfigPackage(),
       new RNAndroidLocationEnablerPackage(),
+      new RNCameraPackage(),
       new DatePickerPackage(),
       new RNDeviceInfo(),
       new RNFSPackage(),
@@ -124,6 +131,7 @@ public class PackageList {
       new MapsPackage(),
       new RNMinimizeAppPackage(),
       new OtpVerifyPackage(),
+      new PagerViewPackage(),
       new ReactNativePushNotificationPackage(),
       new RNRatePackage(),
       new ReanimatedPackage(),
@@ -132,6 +140,7 @@ public class PackageList {
       new RNScreensPackage(),
       new RNSharePackage(),
       new RNSmsRetrieverPackage(),
+      new SplashScreenReactPackage(),
       new WheelPickerPackage(),
       new RNFetchBlobPackage()
     ));

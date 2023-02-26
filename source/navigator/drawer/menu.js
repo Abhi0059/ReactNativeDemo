@@ -177,6 +177,7 @@ class DrawerMenu extends React.PureComponent {
 
   render() {
     const { userImg, email, phone, name, city, appVersion } = this.state;
+    const { navigation } = this.props;
     return (
       <View style={{ flex: 1 }}>
         <View style={{ flex: 1 }}>
@@ -184,7 +185,7 @@ class DrawerMenu extends React.PureComponent {
             <View style={styles.mainTop}>
               <View style={styles.profileView}>
                 <TouchableOpacity
-                  onPress={() => props.navigation.navigate("Profile")}
+                  onPress={() => navigation.navigate("Profile")}
                 >
                   {userImg == undefined || userImg == "" ? (
                     <Image style={styles.proImg} source={profileImg} />

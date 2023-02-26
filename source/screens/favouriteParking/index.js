@@ -123,7 +123,8 @@ export default class FavouriteParking extends Component {
   }
 
   onBackPress = () => {
-    BackHandler.exitApp();
+    // BackHandler.exitApp();
+    this.props.navigation.navigate("Home");
     return true;
   };
 
@@ -132,7 +133,7 @@ export default class FavouriteParking extends Component {
   }
 
   goToDashboard() {
-    this.props.navigation.replace("Dashboard");
+    this.props.navigation.replace("Home");
   }
 
   _renderItem = ({ item, index }) => {
@@ -320,11 +321,11 @@ export default class FavouriteParking extends Component {
         <View style={styles.header}>
           <View
             style={styles.headerTitleWrapper}
-            onPress={() => this.props.navigation.navigate("Dashboard")}
+            onPress={() => this.props.navigation.navigate("Home")}
           >
             <TouchableOpacity
               style={styles.backBtn}
-              onPress={() => this.props.navigation.navigate("Dashboard")}
+              onPress={() => this.props.navigation.navigate("Home")}
             >
               <Image
                 onPress={() => this.select(index, item)}

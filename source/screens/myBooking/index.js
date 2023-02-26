@@ -468,7 +468,7 @@ const upcomingRoute = (bookingDetails) =>
       <View style={{ width: "100%", alignItems: "center", marginTop: 15 }}>
         <TouchableOpacity
           style={styles.explorBtn}
-          onPress={() => global.nav.navigation.navigate("Dashboard")}
+          onPress={() => global.nav.navigation.navigate("Home")}
         >
           <Text style={styles.explorText}>EXPLORE</Text>
         </TouchableOpacity>
@@ -926,7 +926,7 @@ const completedRoute = (completedBookings) =>
       <View style={{ width: "100%", alignItems: "center", marginTop: 15 }}>
         <TouchableOpacity
           style={styles.explorBtn}
-          onPress={() => global.nav.navigation.navigate("Dashboard")}
+          onPress={() => global.nav.navigation.navigate("Home")}
         >
           <Text style={styles.explorText}>EXPLORE</Text>
         </TouchableOpacity>
@@ -1318,11 +1318,11 @@ export default MyBooking = (navigate) => {
         <View style={styles.header}>
           <TouchableOpacity
             style={styles.headerTitleWrapper}
-            onPress={() => navigate.navigation.navigate("Dashboard")}
+            onPress={() => navigate.navigation.navigate("Home")}
           >
             <TouchableOpacity
               style={styles.backBtn}
-              onPress={() => navigate.navigation.navigate("Dashboard")}
+              onPress={() => navigate.navigation.navigate("Home")}
             >
               <Image
                 onPress={() => this.select(index, item)}
